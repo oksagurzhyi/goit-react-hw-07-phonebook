@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import css from './ContactForm.module.css';
-import { contactsSelector, isLoadingSelector } from 'store/selectors';
+import { contactsSelector } from 'store/selectors';
 import { addContactFetch } from 'store/operations';
 
 export default function ContactForm() {
@@ -9,7 +9,6 @@ export default function ContactForm() {
   const [number, setNumber] = useState('');
 
   const contacts = useSelector(contactsSelector);
-  const isLoading = useSelector(isLoadingSelector);
 
   const dispatch = useDispatch();
 
